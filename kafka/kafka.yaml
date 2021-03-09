@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: kafka0
-        imagePullPolicy: Never
-        image: kafka_image:v1
+        imagePullPolicy: Always
+        image: gcr.io/titanium-index-305914/kafka:v1
         resources:
           requests:
             memory: "1Gi"
