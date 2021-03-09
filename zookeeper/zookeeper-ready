@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+OK=$(zkServer.sh status)
+if [ "$OK" == "Mode: leader" ] || ["$OK" == "Mode: follower" ]
+then
+	exit 0
+else
+	exit 1
+fi

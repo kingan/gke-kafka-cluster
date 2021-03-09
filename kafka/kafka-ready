@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+OK=$(kafka-broker-api-versions.sh --bootstrap-server=$1)
+
+if [ "$OK" == "imok" ]; then
+	exit 0
+else
+	exit 1
